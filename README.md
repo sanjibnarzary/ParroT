@@ -100,10 +100,10 @@ pip install -r requirements.txt
 Convert the regular bilingual sentence pairs into Alpaca data format:
 ```
 python3 scripts/convert_pair_to_alpaca.py \
-    -s zh -t en \
+    -s brx_Deva -t eng_Latn \
     -if scripts/instruct_follow.txt \
-    -sf data/train.zh-en.zh.txt \
-    -tf data/train.zh-en.en.txt \
+    -sf ../eng-brx/train.brx_Deva \
+    -tf ../eng-brx/train.eng_Latn \
     -of data/train_alp.json
 ```
 
