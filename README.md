@@ -162,7 +162,7 @@ torchrun --nnodes $HOST_NUM --node_rank $INDEX --nproc_per_node 8 \
     ${train_path} \
     --deepspeed train/deepspeed_config_zero2.json \
     --model_name_or_path ${model_path} \
-    --train_file data/data_parrot_hf.json \
+    --train_file data/train_alp_hf.json \
     --preprocessing_num_workers 16 \
     --dataloader_num_workers 8 \
     --dataloader_pin_memory True \
