@@ -152,9 +152,10 @@ export MASTER_ADDR="${CHIEF_IP:=localhost}"
 export MASTER_PORT="${MASTER_PORT:=29500}"
 
 train_path=transformers/examples/pytorch/language-modeling/run_clm_llms.py
-model_path=<your_proj_path>/llama-7b
-model_save=<your_proj_path>/parrot-hint-7b
-
+model_path=meta-llama/Llama-2-7b
+model_save=data/alayaran/parrot-hint-7b
+export HOST_NUM=1
+export INDEX=1
 # HOST_NUM will be 1
 torchrun --nnodes $HOST_NUM --node_rank $INDEX --nproc_per_node 8 \
     --master_addr $MASTER_ADDR --master_port $MASTER_PORT  \
