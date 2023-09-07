@@ -75,12 +75,12 @@ def write_json(src_file, tgt_file, out_file, ins_list, max_cxt, seed=0):
 
 if __name__ == "__main__":
     """
-    python3 ../create_s2t_alpaca.py -sf train.en-de.en -tf train.en-de.de -s en -t de -if ../instruct_follow.txt -of data_pair_alp.json
+    python3 ../create_s2t_alpaca.py -sf train.eng_Latn -tf train.brx_Latn -s eng_Latn -t brx_Deva -if ../instruct_follow.txt -of data_pair_alp.json
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('--src', '-s', type=str, required=True, help='src language, en, de, ja, zh')
-    parser.add_argument('--tgt', '-t', type=str, required=True, help='tgt language, en, de, ja, zh')
-    parser.add_argument('--lang-ins', '-li', type=str, default='en', help='instruct language, en, de, ja, zh')
+    parser.add_argument('--src', '-s', type=str, required=True, help='src language, eng_Latn, brx_Deva')
+    parser.add_argument('--tgt', '-t', type=str, required=True, help='tgt language, eng_Latn, brx_Deva')
+    parser.add_argument('--lang-ins', '-li', type=str, default='eng_Latn', help='instruct language, eng_Latn, brx_Deva')
     parser.add_argument('--ins-file','-if', type=str, required=True, help='ins file')
     parser.add_argument('--src-file','-sf', type=str, required=True, help='src file')
     parser.add_argument('--tgt-file','-tf', type=str, required=True, help='tgt file')
